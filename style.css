@@ -384,8 +384,7 @@ p {
  .progetti-btn {
     width: 100%;
     display: flex;          
-    align-items: center;     /
-    justify-content: ;                 
+    align-items: center;               
     font-size: 1.2rem;       /* testo leggermente più piccolo */
     margin-bottom: 8px;      /* distanza tra più pulsanti */
   }
