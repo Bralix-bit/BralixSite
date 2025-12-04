@@ -256,3 +256,176 @@ p {
   height: 50px;
   border-radius: 0;
 }
+
+/* ----------------------
+  RESPONSIVE PER TELEFONI 480px
+-------------------------*/
+@media (max-width: 480px) {
+
+  /* BODY */
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR sempre orizzontale */
+  nav {
+    flex-direction: row; /* rimane orizzontale */
+    justify-content: space-around; /* distribuire i link */
+    padding: 20px 10px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    background: rgba(26, 26, 26, 0.8); /* trasparenza per blur */
+    backdrop-filter: blur(10px);       /* blur sfondo */
+    z-index: 1000;
+  }
+
+  nav a {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+
+  /* CONTAINER PRINCIPALE */
+  .container, .container-dev, .container-blur {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+     background: rgba(26, 26, 26, 0.8); /* trasparenza per blur */
+  }
+
+  /* IMMAGINI PROGETTI */
+  .progetti img {
+    width: 90%;        /* occupa meno spazio del contenitore */
+    max-width: 300px;  /* più piccola rispetto a desktop */
+    height: auto;      
+    margin: 0 auto;    
+    border-radius: 15px;
+  }
+
+  /* IMMAGINE HOMEPAGE */
+  .container img {
+    width: 80%;        /* leggermente più piccola */
+    max-width: 350px;  
+    height: auto;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: 5px solid #0077CC;
+  }
+
+  /* CONTAINER CON BLUR CHE COPRE TUTTA LA PAGINA */
+  .container-blur {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    border: none;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+  }
+
+  /* TESTO */
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #0077CC;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  /* PULSANTI */
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .buttons a {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+
+  /* PROGETTI */
+  .progetti {
+    flex-direction: column; /* immagine sopra testo */
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+  .progetti img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+
+  .progetti-text {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .progetti p {
+    max-height: none; /* scroll non necessario */
+  }
+
+ .progetti-btn {
+    width: 100%;
+    display: flex;          
+    align-items: center;     /
+    justify-content: ;                 
+    font-size: 1.2rem;       /* testo leggermente più piccolo */
+    margin-bottom: 8px;      /* distanza tra più pulsanti */
+  }
+
+  .progetti-btn img {
+    width: 30px;             /* icona più piccola */
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    display: block;          /* evita spazi vuoti sotto l’immagine */
+  }
+
+  /* SKILLS */
+  .skills-container {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .skills-container img {
+    width: 70px;
+  }
+
+  /* SECTION LINKS */
+  .section-links {
+    gap: 15px;
+  }
+
+  .section-link {
+    font-size: 1.4rem;
+    padding: 10px;
+  }
+
+  .section-link img {
+    width: 30px;
+    height: auto;
+  }
+
+  /* CANVAS SFONDO */
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+}
