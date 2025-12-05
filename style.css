@@ -6,24 +6,23 @@
 
 body {
   margin: 0;
-  overflow-y: auto; 
+  overflow-y: auto;
   background: #0f0f0f;
 }
 
-
 canvas {
-  position: fixed; 
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1; 
+  z-index: -1;
 }
 
 /* NAVBAR */
 nav {
-  background-color: #1a1a1a; 
+  background-color: #1a1a1a;
   padding: 25px 30px;
   display: flex;
   justify-content: center;
@@ -40,7 +39,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #66C1FF; 
+  color: #66C1FF;
   transform: scale(1.05);
 }
 
@@ -55,29 +54,27 @@ nav a:hover {
   padding: 20px;
 }
 
-.container img{
+.container img {
   width: auto;
   height: 390px;
   margin: 50px;
   border-radius: 30px;
-  border:  10px solid #0077CC;
+  border: 10px solid #0077CC;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-
 }
+
 h1 {
   font-size: 48px;
   margin-bottom: 20px;
   color: #ffffff;
-
 }
 
-h2{
+h2 {
   color: #ffffff;
   line-height: 1.4;
   margin-bottom: 1rem;
   border-bottom: solid 1px #0077CC;
 }
-
 
 p {
   font-size: 18px;
@@ -88,7 +85,7 @@ p {
   text-align: left;
 }
 
-/* PULSANTI */
+/* BUTTONS */
 .buttons {
   display: flex;
   gap: 20px;
@@ -113,11 +110,7 @@ p {
   box-shadow: 0 6px 12px rgba(0,0,0,0.6);
 }
 
-/*---------------------------
------------CONTAINER-------*/
-
-
-/* CONTAINER CENTRALE */
+/* CONTAINER DEV */
 .container-dev {
   display: flex;
   flex-direction: column;
@@ -127,10 +120,10 @@ p {
   gap: 50px;
 }
 
-/* CONTAINER BLUR PER SKILLS */
+/* BOX BLUR */
 .container-blur {
   display: flex;
-  flex-direction: column; /* contenuto verticale: titolo + loghi */
+  flex-direction: column;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   padding: 30px;
@@ -139,27 +132,23 @@ p {
   margin-top: 50px;
   width: 50%;
   box-sizing: border-box;
-  align-items: center; /* centra orizzontalmente gli elementi al suo interno */
-  justify-content: center
-
-  
+  align-items: center;
+  justify-content: center;
 }
 
-.container-blur h2{
-    text-align: center;
-    margin-block: 20px;
-    color: #ffffff;
+.container-blur h2 {
+  text-align: center;
+  margin-block: 20px;
+  color: #ffffff;
 }
 
-
-
+/* SKILLS */
 .skills-container {
   display: flex;
-  flex-wrap: wrap;         /* va a capo se non entra tutto */
-  justify-content: center; /* centra i loghi */
-  gap: 30px;               /* spazio tra i loghi */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
-
 
 .skills-container img {
   width: 90px;
@@ -171,19 +160,20 @@ p {
   transform: scale(1.2);
 }
 
+/* LINK SECTION */
 .section-links {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   gap: 20px;
   width: 100%;
 }
 
 .section-link {
-  display: flex;     
-  justify-content: space-evenly;   
-  align-items: center;        /* icona e testo allineati */
-  gap: 10px;                  /* spazio tra icona e testo */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
   background-color: #ffffff;
   font-weight: 700;
@@ -205,7 +195,6 @@ p {
 }
 
 /* PROGETTI */
-
 .progetti {
   display: flex;
   gap: 20px;
@@ -214,28 +203,46 @@ p {
 
 .progetti-text {
   display: flex;
-  flex-direction: column; 
-  gap: 10px;              
+  flex-direction: column;
+  gap: 10px;
 }
- .progetti img{
+
+.progetti img {
   max-width: 450px;
   height: fit-content;
   border-radius: 20px;
   border: #ffffff solid 2px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
- }
-
- .progetti p {
-  max-height: 250px; 
-  overflow: auto;     /
 }
 
+.progetti p {
+  max-height: 250px;
+  overflow: auto;
+}
 
+/* WRAPPER SCORREVOLE BMW */
+#scrollable-bmw {
+  flex-shrink: 0;
+  width: 450px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 20px;
+  border: #ffffff solid 2px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
 
+#scrollable-bmw img {
+  width: 450px;
+  max-width: none;
+  height: auto;
+}
+
+/* BUTTON PROGETTI */
 .progetti-btn {
-  display: flex;     
-  align-items: center;       
-  gap: 10px;                  
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
   background-color: #ffffff;
   font-weight: 700;
@@ -257,29 +264,22 @@ p {
   border-radius: 0;
 }
 
-/* ----------------------
-  RESPONSIVE PER TELEFONI 480px
--------------------------*/
+/* RESPONSIVE 480px */
 @media (max-width: 480px) {
 
-  /* BODY */
   body {
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
   }
 
-  /* NAVBAR sempre orizzontale */
   nav {
-    flex-direction: row; /* rimane orizzontale */
-    justify-content: space-around; /* distribuire i link */
+    flex-direction: row;
+    justify-content: space-around;
     padding: 20px 10px;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
     position: sticky;
     top: 0;
-    background: rgba(26, 26, 26, 0.8); /* trasparenza per blur */
-    backdrop-filter: blur(10px);       /* blur sfondo */
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
     z-index: 1000;
   }
 
@@ -288,80 +288,14 @@ p {
     margin: 0 5px;
   }
 
-  /* CONTAINER PRINCIPALE */
-  .container, .container-dev, .container-blur {
+  .container,
+  .container-dev,
+  .container-blur {
     width: 100%;
     padding: 10px;
     display: flex;
     flex-direction: column;
-     background: rgba(26, 26, 26, 0.8); /* trasparenza per blur */
-  }
-
-  /* IMMAGINI PROGETTI */
-  .progetti img {
-    width: 90%;        /* occupa meno spazio del contenitore */
-    max-width: 300px;  /* più piccola rispetto a desktop */
-    height: auto;      
-    margin: 0 auto;    
-    border-radius: 15px;
-  }
-
-  /* IMMAGINE HOMEPAGE */
-  .container img {
-    width: 80%;        /* leggermente più piccola */
-    max-width: 350px;  
-    height: auto;
-    margin: 20px auto;
-    border-radius: 20px;
-    border: 5px solid #0077CC;
-  }
-
-  /* CONTAINER CON BLUR CHE COPRE TUTTA LA PAGINA */
-  .container-blur {
-    width: 100%;
-    margin-top: 0;
-    border-radius: 0;
-    border: none;
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-  }
-
-  /* TESTO */
-  h1 {
-    font-size: 28px;
-    text-align: center;
-  }
-
-  h2 {
-    font-size: 20px;
-    text-align: center;
-    border-bottom: 1px solid #0077CC;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 100%;
-    text-align: justify;
-  }
-
-  /* PULSANTI */
-  .buttons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .buttons a {
-    font-size: 1.2rem;
-    padding: 12px 20px;
-  }
-
-  /* PROGETTI */
-  .progetti {
-    flex-direction: column; /* immagine sopra testo */
-    gap: 15px;
-    margin: 20px 0;
+    background: rgba(26, 26, 26, 0.8);
   }
 
   .progetti img {
@@ -372,44 +306,78 @@ p {
     border-radius: 15px;
   }
 
+  .container img {
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: 5px solid #0077CC;
+  }
+
+  .container-blur {
+    width: 100%;
+    margin-top: 0;
+    border-radius: 0;
+    border: none;
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .buttons a {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+  }
+
+  .progetti {
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+  }
+
   .progetti-text {
     flex-direction: column;
     gap: 10px;
   }
 
   .progetti p {
-    max-height: none; /* scroll non necessario */
+    max-height: none;
   }
 
- .progetti-btn {
+  .progetti-btn {
     width: 100%;
-    display: flex;          
-    align-items: center;               
-    font-size: 1.2rem;       /* testo leggermente più piccolo */
-    margin-bottom: 8px;      /* distanza tra più pulsanti */
+    font-size: 1.2rem;
+    margin-bottom: 8px;
   }
 
   .progetti-btn img {
-    width: 30px;             /* icona più piccola */
-    height: auto;
-    margin: 0;
-    border-radius: 0;
-    display: block;          /* evita spazi vuoti sotto l’immagine */
-  }
-
-  /* SKILLS */
-  .skills-container {
-    gap: 20px;
-    justify-content: center;
+    width: 30px;
   }
 
   .skills-container img {
     width: 70px;
-  }
-
-  /* SECTION LINKS */
-  .section-links {
-    gap: 15px;
   }
 
   .section-link {
@@ -419,12 +387,15 @@ p {
 
   .section-link img {
     width: 30px;
-    height: auto;
   }
 
-  /* CANVAS SFONDO */
-  canvas {
+  #scrollable-bmw {
     width: 100%;
-    height: 100%;
+    height: 250px;
+  }
+
+  #scrollable-bmw img {
+    width: 100%;
+    max-width: 100%;
   }
 }
