@@ -8,6 +8,7 @@ body {
   margin: 0;
   overflow-y: auto;
   background: #0f0f0f;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 canvas {
@@ -215,28 +216,83 @@ p {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
+
 .progetti p {
+  --sb-track-color: #404142;
+  --sb-thumb-color: #62b5b4;
+  --sb-size: 10px;
+
   max-height: 250px;
   overflow: auto;
 }
 
-/* WRAPPER SCORREVOLE BMW */
+/* Chrome, Edge, Safari */
+.progetti p::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.progetti p::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 5px;
+}
+
+.progetti p::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 5px;
+}
+
+/* Firefox */
+@supports not selector(::-webkit-scrollbar) {
+  .progetti p {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
 #scrollable-bmw {
+  --sb-track-color: #404142;
+  --sb-thumb-color: #62b5b4;
+  --sb-size: 10px;
+
   flex-shrink: 0;
   width: 450px;
   height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
+
   border-radius: 20px;
   border: #ffffff solid 2px;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
+/* Chrome, Edge, Safari */
+#scrollable-bmw::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+#scrollable-bmw::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+#scrollable-bmw::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 10px;
+}
+
+/* Firefox */
+@supports not selector(::-webkit-scrollbar) {
+  #scrollable-bmw {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+/* Immagine interna */
 #scrollable-bmw img {
   width: 450px;
   max-width: none;
   height: auto;
 }
+
 
 /* BUTTON PROGETTI */
 .progetti-btn {
@@ -263,6 +319,9 @@ p {
   height: 50px;
   border-radius: 0;
 }
+
+
+
 
 /* RESPONSIVE 480px */
 @media (max-width: 480px) {
