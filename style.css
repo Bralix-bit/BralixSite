@@ -327,7 +327,7 @@ p {
   justify-content: space-around;
   gap: 10px;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 
